@@ -16,10 +16,8 @@ public class Game {
                 System.out.println("Для игрока осталась последняя спичка. Игрок проиграл");
                 break;
             } else {
-                System.out.println("На столе осталось " + COUNT + " спичек");
                 userRun();
                 COUNT -= USER_COUNT;
-
                 System.out.println("На столе осталось " + COUNT + " спичек");
             }
         }
@@ -78,6 +76,7 @@ public class Game {
     public void userRun() {
         do {
             try {
+                System.out.println("На столе осталось " + COUNT + " спичек");
                 System.out.print("- Ход игрока. Введите количество спичек: ");
                 USER_COUNT = Integer.parseInt(reader.readLine());
                 if (USER_COUNT < 1 || USER_COUNT > 3) {
